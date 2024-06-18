@@ -21,7 +21,7 @@ spec:
       - name: php-apache
         image: registry.k8s.io/hpa-example
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         resources:
           limits:
             cpu: 500m
@@ -36,7 +36,7 @@ metadata:
     run: php-apache
 spec:
   ports:
-  - port: 80
+  - port: 8080
   selector:
     run: php-apache
 
